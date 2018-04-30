@@ -18,14 +18,21 @@ import com.barclays.bms.xmlparser.BaggageXMLParser;
 
 public class BaggageService {
 	private static final Logger LOGGER = Logger.getLogger(BaggageService.class.getName());
+	private BaggagePathService baggagePathService = new BaggagePathServiceImpl();
+	private BaggageXMLParser xmlParser = new BaggageXMLParser();
+
+
+	public BaggageService(BaggagePathService baggagePathService, BaggageXMLParser xmlParser) {
+		super();
+		this.baggagePathService = baggagePathService;
+		this.xmlParser = xmlParser;
+	}
 
 	/**
 	 * This class is used to handle Baggage information
 	 */
 	public void handleBaggage() {
 		try {
-			BaggagePathService baggagePathService = new BaggagePathServiceImpl();
-			BaggageXMLParser xmlParser = new BaggageXMLParser();
 			// Retrieving baggage info from the XML file
 			BaggageInfo baggageInfo = xmlParser.parseBaggageXML(Constants.BAGGAGE_XML);
 
