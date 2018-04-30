@@ -34,10 +34,10 @@ public class BaggageXMLParser {
 	 * @throws BusinessException
 	 *             if some nodes are missing
 	 */
-	public BaggageInfo parseBaggageXML() throws BusinessException {
+	public BaggageInfo parseBaggageXML(String fileName) throws BusinessException {
 		try {
 			ClassLoader classLoader = BaggageXMLParser.class.getClassLoader();
-			File file = new File(classLoader.getResource(Constants.BAGGAGE_XML).getFile());
+			File file = new File(classLoader.getResource(fileName).getFile());
 
 			DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			Document doc = dBuilder.parse(file);

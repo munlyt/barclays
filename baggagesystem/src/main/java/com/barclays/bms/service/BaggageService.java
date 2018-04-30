@@ -27,7 +27,7 @@ public class BaggageService {
 			BaggagePathService baggagePathService = new BaggagePathServiceImpl();
 			BaggageXMLParser xmlParser = new BaggageXMLParser();
 			// Retrieving baggage info from the XML file
-			BaggageInfo baggageInfo = xmlParser.parseBaggageXML();
+			BaggageInfo baggageInfo = xmlParser.parseBaggageXML(Constants.BAGGAGE_XML);
 
 			/* Finds shortest path for each bags and prints */
 			for (Bag bag : baggageInfo.getBags()) {
