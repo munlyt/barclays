@@ -12,6 +12,8 @@ Input are provided in a form of XML where each section are read in BaggageXMLPar
 
 Exceptions are handled using BusinessException with proper error codes. Logging mechanism is also implemented. Unit test are performed for critical business methods.
 
+TO run the application, Run MainApplication.java
+
 
 # Output:
 Baggage ID: 0001 Route: [ Concourse_A_Ticketing A5 A1] Duration : 11.0
