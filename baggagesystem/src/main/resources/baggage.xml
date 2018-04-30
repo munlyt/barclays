@@ -56,6 +56,11 @@
 			<destination>A6</destination>
 			<duration>1</duration>
 		</BaggageNode>
+		<BaggageNode>
+			<source>A6</source>
+			<destination>A5</destination>
+			<duration>1</duration>
+		</BaggageNode>
 	</Conveyor>
 	<Departures>
 		<Flight>

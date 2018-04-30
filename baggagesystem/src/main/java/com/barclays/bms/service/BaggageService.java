@@ -13,6 +13,7 @@ import com.barclays.bms.exception.ErrorToken;
 import com.barclays.bms.model.Bag;
 import com.barclays.bms.model.BaggageInfo;
 import com.barclays.bms.model.Flight;
+import com.barclays.bms.utils.Constants;
 import com.barclays.bms.xmlparser.BaggageXMLParser;
 
 public class BaggageService {
@@ -51,6 +52,10 @@ public class BaggageService {
 	 */
 	private String getGateInfoForBag(String bagId, String bagDestination, List<Flight> flights)
 			throws BusinessException {
+		if(Constants.ARRIVAL.equalsIgnoreCase(bagDestination)){
+			return Constants.BAGGAGE_CLAIM;
+		}
+		
 		String gate = null;
 		for (Flight flight : flights) {
 			if (flight.getFlightNo() != null && flight.getFlightNo().equals(bagDestination)) {

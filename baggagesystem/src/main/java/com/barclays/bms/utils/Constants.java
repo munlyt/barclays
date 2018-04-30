@@ -14,6 +14,9 @@ public class Constants {
 	public static final String NODE_GATE = "gate";
 	public static final String NODE_DEPARTURETIME = "departureTime";
 	public static final String NODE_BAGGAGEID = "baggageId";
+	
+	public static final String ARRIVAL = "Arrival";
+	public static final String BAGGAGE_CLAIM = "BaggageClaim";
 
 	private Constants() {
 	}
